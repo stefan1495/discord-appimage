@@ -41,7 +41,7 @@ jobs:
         cd discord
         wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
         chmod +x *.AppImage
-        ./appimagetool-x86_64.AppImage Discord -n -u 'gh-releases-zsync|stefan1495|discord-appimage|latest|Discord*.AppImage.zsync' Discord-$(cat Discord/resources/build_info.json | jq -r .version)-x86_64.AppImage
+        ./appimagetool-x86_64.AppImage Discord -n Discord-$(cat Discord/resources/build_info.json | jq -r .version)-x86_64.AppImage
         mkdir dist
         mv Discord*.AppImage dist/.
         mv *.zsync dist/.
@@ -112,7 +112,7 @@ jobs:
         chmod +x *.AppImage
         rm DiscordPTB/discord*ptb*.desktop
         ls DiscordPTB
-        ./appimagetool-x86_64.AppImage DiscordPTB -n -u 'gh-releases-zsync|stefan1495|discord-appimage|canary|Discord*.AppImage.zsync' Discord-$(cat DiscordPTB/resources/build_info.json | jq -r .version)-x86_64.AppImage
+        ./appimagetool-x86_64.AppImage DiscordPTB -n Discord-$(cat DiscordPTB/resources/build_info.json | jq -r .version)-x86_64.AppImage
         mkdir dist
         mv Discord*.AppImage dist/.
         mv *.zsync dist/.
@@ -183,7 +183,7 @@ jobs:
         chmod +x *.AppImage
         rm DiscordCanary/discord*canary*.desktop
         ls DiscordCanary
-        ./appimagetool-x86_64.AppImage DiscordCanary -n -u 'gh-releases-zsync|stefan1495|discord-appimage|canary|Discord*.AppImage.zsync' Discord-$(cat DiscordCanary/resources/build_info.json | jq -r .version)-x86_64.AppImage
+        ./appimagetool-x86_64.AppImage DiscordCanary -n Discord-$(cat DiscordCanary/resources/build_info.json | jq -r .version)-x86_64.AppImage
         mkdir dist
         mv Discord*.AppImage dist/.
         mv *.zsync dist/.
