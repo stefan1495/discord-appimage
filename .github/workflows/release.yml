@@ -44,7 +44,6 @@ jobs:
         ./appimagetool-x86_64.AppImage Discord -n Discord-$(cat Discord/resources/build_info.json | jq -r .version)-x86_64.AppImage
         mkdir dist
         mv Discord*.AppImage dist/.
-        mv *.zsync dist/.
         cd dist
         chmod +x *.AppImage
         cd ..
@@ -115,7 +114,6 @@ jobs:
         ./appimagetool-x86_64.AppImage DiscordPTB -n Discord-$(cat DiscordPTB/resources/build_info.json | jq -r .version)-x86_64.AppImage
         mkdir dist
         mv Discord*.AppImage dist/.
-        mv *.zsync dist/.
         cd dist
         chmod +x *.AppImage
         cd ..
@@ -186,7 +184,6 @@ jobs:
         ./appimagetool-x86_64.AppImage DiscordCanary -n Discord-$(cat DiscordCanary/resources/build_info.json | jq -r .version)-x86_64.AppImage
         mkdir dist
         mv Discord*.AppImage dist/.
-        mv *.zsync dist/.
         cd dist
         chmod +x *.AppImage
         cd ..
