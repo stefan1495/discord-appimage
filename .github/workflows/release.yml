@@ -39,7 +39,7 @@ jobs:
       run: |
         sudo apt install libfuse2 -y
         cd discord
-        wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
+        wget https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
         chmod +x *.AppImage
         ./appimagetool-x86_64.AppImage Discord -n Discord-$(cat Discord/resources/build_info.json | jq -r .version)-x86_64.AppImage
         mkdir dist
@@ -107,7 +107,7 @@ jobs:
       run: |
         sudo apt install libfuse2 -y
         cd discord
-        wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
+        wget https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
         chmod +x *.AppImage
         rm DiscordPTB/discord*ptb*.desktop
         ls DiscordPTB
@@ -177,7 +177,7 @@ jobs:
       run: |
         sudo apt install libfuse2 -y
         cd discord
-        wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
+        wget https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
         chmod +x *.AppImage
         rm DiscordCanary/discord*canary*.desktop
         ls DiscordCanary
